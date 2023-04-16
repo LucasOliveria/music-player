@@ -38,5 +38,6 @@
 <h2 style="font-family: sans-serif;">Links</h2>
 
 <a href="http://www.linkedin.com/in/lucas-de-oliveira-5b8a5532" target="_blank">LinkedIn</a>
+<br>
 <a href="http://music-player-olivr.netlify.app">Music Player</a>
 <br>
