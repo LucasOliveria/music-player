@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 100px;
+    border-bottom: 1px solid #6A6363;
+    font-size: 16px;
+    line-height: 19px;
+    transform: rotate(0.05deg);
+}
+
+img[alt="logo"] {
+    height: 60px;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    width: 183px;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border: 2px solid #6A6363;
+    border-radius: 50%;
+    cursor: pointer;
+}

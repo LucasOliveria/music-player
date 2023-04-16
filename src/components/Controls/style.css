@@ -1,0 +1,94 @@
+.container-controls {
+    display: flex;
+    height: 122px;
+    background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
+    border-top: 2px solid rgba(0, 0, 0, 0.21)
+}
+
+.title-artist {
+    width: 221px;
+    margin: 24px 0 0 32px;
+}
+
+.title-artist h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.title-artist p {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.bar-controls {
+    margin-left: 35px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 0 259px;
+    width: 328px;
+    height: 64px;
+}
+
+img[alt="stop"],
+img[alt="previous"],
+img[alt="next"] {
+    width: 48px;
+    height: 48px;
+}
+
+.buttom-control {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.buttom-control:hover {
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+.container-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 642px;
+    height: 20px;
+    margin: 8px 0 8px 146px;
+}
+
+.initial-number,
+.final-number {
+    font-size: 16px;
+    line-height: 19px;
+    color: #CCC3C3;
+}
+
+.progress-bar {
+    width: 560px;
+    border-bottom: 4px solid #CCC3C3;
+    border-radius: 3px;
+    transform: rotate(0.05deg);
+    position: relative;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    border-bottom: 4px solid #E5007B;
+    position: absolute;
+}
+
+.progress-ball {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #E5007B;
+    position: absolute;
+    bottom: -8px;
+    left: 99%;
+}

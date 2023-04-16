@@ -1,0 +1,61 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container-play-list {
+    margin: 40px 0 48px 0;
+    width: 1121px;
+    height: 499px;
+}
+
+.container-play-list h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.line {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #6A6363;
+    transform: rotate(0.05deg);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 260px;
+    font-family: 'Rubik';
+    font-style: normal;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+    color: #CCC3C3;
+}
+
+.card img {
+    width: 260px;
+    height: 260px;
+}
