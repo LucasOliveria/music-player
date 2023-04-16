@@ -1,5 +1,5 @@
 import './App.css';
-import Header from '../../components/header';
+import Header from "../../components/Header"
 import Cards from '../../components/Cards';
 import Controls from '../../components/Controls';
 import { useState, useRef } from 'react';
