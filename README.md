@@ -3,7 +3,7 @@
 <h2 style="font-family: sans-serif;">Sobre o projeto:</h2>
 
 <p style="text-align: justify;">
-    O objetivo desse projeto foi desenvolver uma aplicação web utilizando o React e suas funcionalidades. Com essa magnífica biblioteca para web e interfaces de usuário nativas foi possível criar essa aplicação que se trata de um mini <strong >Player de Música</strong>. Para produzir o layout foi utilizado o arquivo figma disponibilizado pela <strong >Cubos Academy</strong> na aula de desafios React, onde pude aprimorar e por em prática meus conhecimentos.
+    O objetivo desse projeto foi desenvolver uma aplicação web utilizando o React e suas funcionalidades. Com essa magnífica biblioteca para web e interfaces de usuário nativas foi possível criar essa aplicação que se trata de um mini <strong >Player de Música</strong>. Para produzir o layout foi utilizado o arquivo figma.fig disponibilizado pela <strong >Cubos Academy</strong> na aula de desafios React, onde pude aprimorar e por em prática meus conhecimentos.
 </p>
 
 <h2 style="font-family: sans-serif;">Sobre o Player de Música:</h2>
@@ -14,7 +14,8 @@
 
 <h2 style="font-family: sans-serif;">Layout:</h2>
 
-<img src="./layout-image.png" alt="layout">
+<img src="./images/layout-image.png" alt="layout">
+<img src="./images/layout-image-playing.png" alt="layout playing">
 
 <h2 style="font-family: sans-serif;">Como utilizar os códigos desse repositório:</h2>
 
