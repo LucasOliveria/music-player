@@ -105,6 +105,7 @@ function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, 
         <h3>{title}</h3>
         <p>{artist}</p>
       </div>
+
       <div className="bar-controls">
         <div className="controls">
           <img
@@ -144,6 +145,8 @@ function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, 
           <span className="final-number">{duration}</span>
         </div>
       </div>
+
+      <div className="aux-div"></div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 .container-controls {
     display: flex;
+    justify-content: space-between;
     height: 122px;
     background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
     border-top: 2px solid rgba(0, 0, 0, 0.21)
@@ -22,14 +23,16 @@
 }
 
 .bar-controls {
-    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 0 0 259px;
+    margin: 16px 0 0 0px;
     width: 328px;
     height: 64px;
 }
@@ -58,7 +61,7 @@ img[alt="next"] {
     gap: 8px;
     width: 642px;
     height: 20px;
-    margin: 8px 0 8px 146px;
+    margin: 8px 0 8px 0px;
 }
 
 .initial-number,
@@ -91,4 +94,9 @@ img[alt="next"] {
     position: absolute;
     bottom: -8px;
     left: 99%;
+}
+
+.aux-div {
+    width: 221px;
+    margin-right: 32px;
 }
