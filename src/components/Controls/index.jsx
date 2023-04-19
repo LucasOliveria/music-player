@@ -22,8 +22,7 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
 
         if (seconds > "59") {
           seconds = "00";
-          minutes += 1
-          console.log("oi");
+          minutes += 1;
         }
 
         setTimer(`${minutes}:${seconds}`)
