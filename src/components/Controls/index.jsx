@@ -9,7 +9,7 @@ import { musics } from "../../musics.js"
 function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, playPause, setPlayPause, audioRef, progressRef, timer, setTimer }) {
   let interval;
   let seconds;
-  let minutes = "0";
+  let minutes;
 
   function handlePlayPauseMusic() {
     if (urlMusic) {
@@ -17,11 +17,13 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
         const duration = audioRef.current.duration / 60;
         const currentTimePercent = ((audioRef.current.currentTime / 60) * 100) / duration;
 
-        seconds = parseInt(audioRef.current.currentTime).toString().padStart(2, "0");
+        minutes = parseInt(audioRef.current.currentTime / 60);
+        seconds = Math.round(((audioRef.current.currentTime / 60) % 1) * 60).toString().padStart(2, "0");
 
         if (seconds > "59") {
-          minutes = parseInt(audioRef.current.currentTime / 60).toString();
-          seconds = Math.round(((audioRef.current.currentTime / 60) % 1) * 60).toString().padStart(2, "0");
+          seconds = "00";
+          minutes += 1
+          console.log("oi");
         }
 
         setTimer(`${minutes}:${seconds}`)
