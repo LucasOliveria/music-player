@@ -33,10 +33,10 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
 
         if (progressRef.current.style.width === "100%") {
           progressRef.current.style.width = "0%";
-
           setPlayPause(true);
-          clearInterval(interval);
           setTimer("0:00");
+
+          clearInterval(interval);
         }
       }, 1000);
 
@@ -68,8 +68,9 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
           duration: previuosMusic.duration
         })
 
-        setPlayPause(true);
         progressRef.current.style.width = "0%";
+        setPlayPause(true);
+        setTimer("0:00");
       }
 
       if (btnControl === "next") {
@@ -86,8 +87,9 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
           duration: nextMusic.duration
         })
 
-        setPlayPause(true);
         progressRef.current.style.width = "0%";
+        setPlayPause(true);
+        setTimer("0:00");
       }
     }
   }
