@@ -14,8 +14,8 @@ function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, pl
   function handlePlayPauseMusic() {
     if (urlMusic) {
       interval = setInterval(() => {
-        const duration = audioRef.current.duration / 60
-        const currentTimePercent = ((audioRef.current.currentTime / 60) * 100) / duration
+        const duration = audioRef.current.duration / 60;
+        const currentTimePercent = ((audioRef.current.currentTime / 60) * 100) / duration;
 
         seconds = parseInt(audioRef.current.currentTime).toString().padStart(2, "0");
 
