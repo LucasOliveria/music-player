@@ -6,25 +6,37 @@ import play from "../../assets/play.svg";
 import next from "../../assets/next.svg";
 import { musics } from "../../musics.js"
 
-function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, setPlayPause, audioRef, progressRef }) {
+function Controls({ title, artist, urlMusic, musicInfoDuration, setMusicInfo, playPause, setPlayPause, audioRef, progressRef, timer, setTimer }) {
   let interval;
+  let seconds;
+  let minutes = "0";
 
-  async function handlePlayPauseMusic() {
+  function handlePlayPauseMusic() {
     if (urlMusic) {
-
       interval = setInterval(() => {
         const duration = audioRef.current.duration / 60
         const currentTimePercent = ((audioRef.current.currentTime / 60) * 100) / duration
+
+        seconds = parseInt(audioRef.current.currentTime).toString().padStart(2, "0");
+
+        if (seconds > "59") {
+          minutes = parseInt(audioRef.current.currentTime / 60).toString();
+          seconds = Math.round(((audioRef.current.currentTime / 60) % 1) * 60).toString().padStart(2, "0");
+        }
+
+        setTimer(`${minutes}:${seconds}`)
+        progressRef.current.style.width = `${currentTimePercent}%`;
 
         if (audioRef.current.paused) {
           clearInterval(interval);
         }
 
-        progressRef.current.style.width = `${currentTimePercent}%`;
-
         if (progressRef.current.style.width === "100%") {
           progressRef.current.style.width = "0%";
+
+          setPlayPause(true);
           clearInterval(interval);
+          setTimer("0:00");
         }
       }, 1000);
 
@@ -95,6 +107,7 @@ function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, 
 
       progressRef.current.style.width = "0%"
       setPlayPause(false);
+      setTimer("0:00");
     }
   }
 
@@ -134,7 +147,7 @@ function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, 
           />
         </div>
         <div className="container-bar">
-          <span className="initial-number">0:00</span>
+          <span className="initial-number">{timer}</span>
 
           <div className="progress-bar">
             <div ref={progressRef} className="progress">
@@ -142,7 +155,7 @@ function Controls({ title, artist, urlMusic, duration, setMusicInfo, playPause, 
             </div>
           </div>
 
-          <span className="final-number">{duration}</span>
+          <span className="final-number">{musicInfoDuration}</span>
         </div>
       </div>
 

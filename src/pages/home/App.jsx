@@ -12,6 +12,7 @@ function App() {
     duration: "0:00"
   });
   const [playPause, setPlayPause] = useState(false);
+  const [timer, setTimer] = useState("0:00")
 
   const audioRef = useRef(null);
   const progressRef = useRef(null);
@@ -25,18 +26,21 @@ function App() {
         setMusicInfo={setMusicInfo}
         setPlayPause={setPlayPause}
         progressRef={progressRef}
+        setTimer={setTimer}
       />
 
       <Controls
         title={musicInfo.title}
         artist={musicInfo.artist}
         urlMusic={musicInfo.urlMusic}
-        duration={musicInfo.duration}
+        musicInfoDuration={musicInfo.duration}
         setMusicInfo={setMusicInfo}
         playPause={playPause}
         setPlayPause={setPlayPause}
         audioRef={audioRef}
         progressRef={progressRef}
+        timer={timer}
+        setTimer={setTimer}
       />
 
       <audio ref={audioRef} src={musicInfo.urlMusic}></audio>

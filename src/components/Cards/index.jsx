@@ -1,7 +1,7 @@
 import "./style.css";
 import { musics } from "../../musics.js"
 
-function Cards({ title, setMusicInfo, setPlayPause, progressRef }) {
+function Cards({ title, setMusicInfo, setPlayPause, progressRef, setTimer }) {
 
   function handleMusicInfo(id) {
     const correspondingCard = musics.find((card) => card.id === id);
@@ -16,6 +16,7 @@ function Cards({ title, setMusicInfo, setPlayPause, progressRef }) {
 
       progressRef.current.style.width = "0%";
       setPlayPause(true);
+      setTimer("0:00");
     }
 
   }
